@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <p id="display">This is the body</p> 
+   <button onclick=main()>Trigger</button>
+</body>
+<script type="text/javascript">
+    function main () {
+        let name="Wycliff";
+        let subject1=88;
+        let subject2=80;
+        let subject3=70;
+
+        let display=document.getElementById("display");
+        let sum=subject1 + subject2 + subject3;
+        let average=(sum/300)*100;
+        if (average >=80){
+            alert(`${name} your grade is "A" average is ${average}`);
+        }
+        else if (average >=50){
+            alert(`${name} Your grade is "B" Average is ${average}`);
+        }
+        else {
+            alert(`${name} Your grade is "FAIL" average is ${average}`);
+            display.innerHTML=`${name} Your grade is "FAIL" Average is ${average} `;
+        }
+    }
+    main()
+</script>
+</html>
